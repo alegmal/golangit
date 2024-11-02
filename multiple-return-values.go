@@ -2,6 +2,6 @@ package main
 
 // import "fmt"
 
-func value() (int, int){
-	return 1, 2
-}
+// func value() (int, int){
+// 	return 1, 2
+// }
