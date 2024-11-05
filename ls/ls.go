@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func check(e error) {
+func checkForError(e error) {
 	if e != nil {
 		panic(e)
 	}
@@ -13,9 +13,10 @@ func check(e error) {
 
 func main() {
 	files, err := os.ReadDir(".")
-	check(err)
+	checkForError(err)
 
 	for _, file := range files {
-		fmt.Println(file.Name(), file.IsDir())
+		// fmt.Println(file.Name(), file.IsDir())
+		fmt.Print(file.Name(), " ")
 	}
 }
