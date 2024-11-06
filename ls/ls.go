@@ -32,7 +32,7 @@ func main() {
 				info, err := os.Stat(file.Name())
 				checkForError(err)
 
-				fmt.Println(info.Mode(), " ", file.Name(), " ")
+				fmt.Println(info.Mode(), " ", info.Size(), info.ModTime().Month(), file.Name(), " ")
 			} else {
 				fmt.Print(file.Name(), " ")
 			}
